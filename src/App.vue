@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <router-view/>
+        <router-view />
     </div>
 </template>
 
@@ -20,10 +20,17 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         color: #070707;
-        font-size: 14px;
-        // background-color: #f3f3f3;
+        font-size: 16px;
     }
-
+    #app {
+        padding: 40px;
+        box-sizing: border-box;
+    }
+    // 返回按钮
+    .el-button {
+        width: 140px;
+        margin-top: 20px !important;
+    }
     #nav {
         padding: 30px;
 

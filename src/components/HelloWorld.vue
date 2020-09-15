@@ -1,32 +1,24 @@
 <template>
     <div class="hello">
-        <div>这里是liufan的git</div>
+        <div>lfgit就从这里开始吧</div>
     </div>
 </template>
 
 <script>
-export default {
-    name: 'HelloWorld',
-    props: {
-        msg: String,
-    },
-}
+    export default {
+        name: 'HelloWorld',
+        props: {
+            msg: String,
+        },
+    }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-h3 {
-    margin: 40px 0 0;
-}
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-li {
-    display: inline-block;
-    margin: 0 10px;
-}
-a {
-    color: #42b983;
-}
+    .hello {
+        div {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
 </style>

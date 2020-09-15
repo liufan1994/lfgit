@@ -17,5 +17,5 @@ function setMetaArgs(targetWidth) {
 }
 
 // window.onload = () => {
-setMetaArgs(375)
+setMetaArgs(1920)
 // }
