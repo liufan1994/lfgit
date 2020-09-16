@@ -2,7 +2,7 @@
  * @Author: hzq
  * @Date: 2020-08-14 16:10:06
  * @Last Modified by: hzq
- * @Last Modified time: 2020-08-14 17:56:08
+ * @Last Modified time: 2020-09-16 17:12:51
  * @文件说明: 上传文件
  */
 <template>
@@ -16,7 +16,7 @@
                         <img class="close" src="../assets/delete.png" @click="close(index)">
                         <img :src="item" />
                     </div>
-                    <div class="add" v-show="maxStatus" @click="chooseType">
+                    <div class="add" v-if="maxStatus" @click="chooseType">
                         <img class="add-image" src="../assets/add.png">
                     </div>
                 </div>
@@ -89,22 +89,33 @@
             },
 
             upload(file) {
+                console.log('file: ', file)
                 return new Promise(resolve => {
                     console.log('resolve: ', resolve)
                     if (checkImgFileSize(file)) {
-                        // const that = this
+                        const that = this
                         const imageCompressor = new ImageCompressor(file, {
                             // 图片压缩的质量，可改
                             quality: 0.2,
-                            // success(fileRes) {
-                            //     that.uploadFile(fileRes, resolve)
-                            // },
+                            success(fileRes) {
+                                console.log('fileRes: ', fileRes)
+                                that.list.push(fileRes.name)
+                                console.log('this.list: ', that.list)
+                                if (that.list.length === that.max) {
+                                    that.maxStatus = false
+                                }
+                                // that.uploadFile(fileRes, resolve)
+                            },
                         })
                         console.log(imageCompressor)
+                    } else {
+                        this.list.push(file.name)
+                        console.log('this.list: ', this.list)
+                        if (this.list.length === this.max) {
+                            this.maxStatus = false
+                        }
+                        // this.uploadFile(file)
                     }
-                    //  else {
-                    //     this.uploadFile(file)
-                    // }
                 })
             },
 

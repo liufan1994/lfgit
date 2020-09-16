@@ -21,8 +21,8 @@
         </div>
         <!-- 波浪线 -->
         <div class="wavySty"></div>
+        <!-- 触摸切换图片 -->
         <button class="example"></button>
-        <div class="mytext">超过两行显示省略号，超过两行显示省略号超过两行显，示省略号超过两，示省略号dvdsdvsd。</div>
     </div>
 </template>
 
@@ -112,11 +112,6 @@
         .example:hover,
         .example:active {
             background-image: url('../assets/delete.png');
-        }
-        .mytext {
-            width: 260px;
-            text-align: justify; // 所有行两端对齐
-            text-align-last: left;
         }
     }
 </style>

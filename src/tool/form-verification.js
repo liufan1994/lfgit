@@ -2,7 +2,7 @@
  * @Author: hzq
  * @Date: 2020-08-13 15:54:28
  * @Last Modified by: hzq
- * @Last Modified time: 2020-09-15 17:07:43
+ * @Last Modified time: 2020-09-16 11:12:57
  * @文件说明: 表单验证规则
  */
 const rules = {
