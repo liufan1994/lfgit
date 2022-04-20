@@ -21,7 +21,7 @@
         -moz-osx-font-smoothing: grayscale;
         color: #070707;
         font-size: 14px;
-        // background-color: #f3f3f3;
+        background-color: #f3f3f3;
     }
 
     #nav {
