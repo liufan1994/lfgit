@@ -8,7 +8,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    isLogin: false,
+    isLogin: 'myliufan',
   },
   mutations: {
     setLogin(state, isLogin) {
@@ -48,6 +48,6 @@ export default new Vuex.Store({
     hero
   },
   getters: {
-    heros: state => state.heros,
+    isLogin: state => state.isLogin,
   }
 })

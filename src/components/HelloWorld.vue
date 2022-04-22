@@ -1,6 +1,6 @@
 <template>
     <div class="hello">
-        <div>这里是liufan的git</div>
+        <div>这里是liufan的git {{ isLoginCom }}</div>
     </div>
 </template>
 
@@ -10,6 +10,16 @@ export default {
     props: {
         msg: String,
     },
+    data(){
+        return{}
+    },
+    computed:{
+        isLoginCom () {
+            return this.$store.getters.isLogin 
+        },
+    },
+    created(){
+    }
 }
 </script>
 
