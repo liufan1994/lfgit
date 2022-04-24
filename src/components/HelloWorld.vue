@@ -2,6 +2,7 @@
     <div class="HelloWorld">
         <div>这里是liufan的git {{ isLoginCom }}</div>
         <div class="myStyle" @click="myFunction">点我 {{total}} </div>
+        <!-- <p>djgnsakjgnjdsnfkjwjsmfkredmkfd</p> -->
     </div>
 </template>
 
@@ -51,6 +52,9 @@ export default {
     .myStyle{
         color: #3399ff;
         cursor: pointer;
+    }
+    p{
+        width: 10px;
     }
 }
 </style>
