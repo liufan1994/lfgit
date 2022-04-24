@@ -4,7 +4,7 @@ import axios from 'axios'
 // import router from '@/router'
 
 const instance = axios.create({
-    // baseURL: 'https://xqadmin.ikanke.cn:10443/ywapi/',
+    baseURL: '',
     timeout: 15000,
 })
 // 添加请求拦截器

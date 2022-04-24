@@ -16,3 +16,7 @@
         },
     }
 </script>
+<style lang="scss" scoped>
+.home{
+}
+</style>

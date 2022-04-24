@@ -1,17 +1,21 @@
 <template>
-    <div class="hello">
+    <div class="HelloWorld">
         <div>这里是liufan的git {{ isLoginCom }}</div>
+        <div class="myStyle" @click="myFunction">点我 {{total}} </div>
     </div>
 </template>
 
 <script>
+import { heros } from '../apis/home'
 export default {
     name: 'HelloWorld',
     props: {
         msg: String,
     },
     data(){
-        return{}
+        return{
+            total:''
+        }
     },
     computed:{
         isLoginCom () {
@@ -19,24 +23,36 @@ export default {
         },
     },
     created(){
+    },
+    methods:{
+        async myFunction(){
+            try {
+                const res =await heros({
+                    user_id: {},
+                    page: 1,
+                    pageSize: 1,
+                    chain_type: 'bscscan'
+                })
+                console.log('res: ', res);
+                this.total = res.body.total
+            } catch (err) {
+                console.log('err: ', err);
+                console.log('axios: ', this.$instance);
+            }
+        }
     }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-h3 {
-    margin: 40px 0 0;
-}
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-li {
-    display: inline-block;
-    margin: 0 10px;
-}
-a {
-    color: #42b983;
+.HelloWorld{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .myStyle{
+        color: #3399ff;
+        cursor: pointer;
+    }
 }
 </style>

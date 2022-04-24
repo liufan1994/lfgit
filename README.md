@@ -1,24 +1,89 @@
 # lfgit2
 
-## Project setup
+### Vue 基础生
+
+1. [Vue](https://cn.vuejs.org/)
+2. [Vue Router](https://router.vuejs.org/zh/)
+3. [Vuex](https://vuex.vuejs.org/zh/)
+4. [Vue CLI 3.0](https://cli.vuejs.org/zh/)
+
+### 第三方库
+
+1. [sass/scss](https://sass-lang.com/)
+
+2. [axios](https://github.com/axios/axios)
+
+3. [element-ui](http://element.eleme.io/#/zh-CN)
+
+## 项目结构
+
+``` js
+.
+├── public                                                            // 项目 html 模板
+│   ├── favicon.ico
+│   └── index.html
+├── src                                                               // 源代码
+│   ├── api                                                           // 接口请求
+│   ├── assets                                                        // 公共静态资源
+│   ├── components                                                    // 公共组件
+│   │  ├── audio-common                                               // 音频组件
+│   │  └── no-data                                                    // 无数据组件
+│   ├── plugins                                                       // 第三方库或者组件统一入口
+│   │  └── axios                                                      // http请求封装（axios）及请求错误处理
+│   ├── router                                                        // Vue Router路由配置文件
+│   ├── store                                                         // Vuex 数据状态管理
+│   ├── utils                                                         // 公共工具函数
+│   ├── views                                                         // 业务组件（这里需要进一步描述业务模块）
+│   ├── App.vue                                                       // 根组件
+│   └── main.js                                                       // 入口 js
+├── .env.production                                                   // 环境变量：线上开发环境
+├── .env.development                                                  // 环境变量：本地开发环境
+├── .eslintrc.js                                                      // eslint 配置文件
+├── .gitignore                                                        // git 忽略文件
+├── babel.config.js                                                   // Babel 配置文件
+├── package.json                                                      // 依赖管理
+├── README.md                                                         // 项目文档
+└── vue.config.js                                                     // Vue CLI 3 配置
+```
+## 项目开发
+
+1. Project setup
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+2. Compiles and hot-reloads for development
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+3. Compiles and minifies for production
 ```
 npm run build
 ```
 
-### Lints and fixes files
+4. Lints and fixes files
 ```
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 使用方式
+
+### 组件全局注册
+
+1. `components` 中全局注册组件的文件 `_global.js`
+
+2. `main.js` 引入 ` @/components/_global.js `
+
+3. 页面中使用,无需引入组件，直接使用 ` <HelloWorld /> `
+
+4. ps: `组件名称不可重复`
+
+4. [官网说明](https://cn.vuejs.org/v2/guide/components-registration.html#%E5%9C%A8%E6%A8%A1%E5%9D%97%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%B1%80%E9%83%A8%E6%B3%A8%E5%86%8C)
+
+### apis 使用
+
+## 预览地址
+
+1. [开发环境: https://xxx.xxx.com](https://xxx.xxx.com/)
+2. [测试环境：https://xxx.xxx.com](https://xxx.xxx.com)
