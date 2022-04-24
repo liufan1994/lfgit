@@ -33,11 +33,9 @@ export default {
                     pageSize: 1,
                     chain_type: 'bscscan'
                 })
-                console.log('res: ', res);
                 this.total = res.body.total
             } catch (err) {
                 console.log('err: ', err);
-                console.log('axios: ', this.$instance);
             }
         }
     }

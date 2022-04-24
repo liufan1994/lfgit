@@ -60,3 +60,4 @@ instance.interceptors.response.use(
 
 Vue.prototype.$axios = axios
 Vue.prototype.$instance = instance
+export default instance
