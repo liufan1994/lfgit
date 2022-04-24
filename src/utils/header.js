@@ -8,14 +8,14 @@ function setMetaArgs(targetWidth) {
             targetWidth +
             ',initial-scale=' +
             scale +
-            // ',minimum-scale=' +
-            // scale +
-            // ',maximum-scale=' +
-            // scale +
+            ',minimum-scale=' +
+            scale +
+            ',maximum-scale=' +
+            scale +
             ',user-scalable=no')
     document.getElementsByTagName('head')[0].appendChild(meta)
 }
 
 // window.onload = () => {
-setMetaArgs(375)
+setMetaArgs(750)
 // }

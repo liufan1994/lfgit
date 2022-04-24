@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import './plugins/axios/index'
 import './utils/header.js'
+import '@/components/_global.js'
 
 Vue.config.productionTip = false
 

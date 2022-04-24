@@ -24,10 +24,6 @@ const cdn = {
         'https://cdn.idlemystic.io/download/js/web3.js',
         'https://cdn.idlemystic.io/download/js/torus-embed.js',
         'https://cdn.idlemystic.io/download/js/Portis.js',
-        'https://cdn.idlemystic.io/download/js/bitski.js',
-        'https://cdn.idlemystic.io/download/js/walletconnect.js',
-        'https://cdn.idlemystic.io/download/js/Arkane.js',
-        'https://cdn.idlemystic.io/download/js/fortmatic.js'
     ]
 }
 
