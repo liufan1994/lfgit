@@ -8,6 +8,7 @@ import './utils/header.js'
 import '@/components/_global.js'
 
 Vue.config.productionTip = false
+console.log('router: ', router);
 
 Vue.use(Button)
 Vue.prototype.$message = Message

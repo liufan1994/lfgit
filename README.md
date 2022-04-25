@@ -76,7 +76,7 @@ npm run lint
 ## 规范
 
 
-1. 取名小写，使用 `_` 隔开 例如：`layout_top`
+1. 取名小写，使用 `_` 隔开 例如：`layout_top` 
 
 2. src路径使用 `@/` 例如：`@/assets/commom/logo.png  @commom/logo.png`
 
@@ -98,7 +98,7 @@ npm run lint
 
 1. apis文件夹里面创建文件home.js
 
-2. 引入`import axios from '../plugins/axios/index'`
+2. 引入`import axios from '../plugins/axios/index`
 
 3. 在`home.js`添加接口: 传两个参数 `params(传值)`  `otherParams(headers)`,不传则默认{}
 ```

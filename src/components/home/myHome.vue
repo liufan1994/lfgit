@@ -1,12 +1,12 @@
 <template>
-    <div class="myHome">
+    <div class="my_home">
         <div>{{ isLoginCom }}</div>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'myHome',
+    name: 'my_home',
     props: {
         msg: String,
     },
@@ -25,7 +25,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.myHome{
+.my_home{
     display: flex;
     flex-direction: column;
     align-items: center;

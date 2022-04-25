@@ -21,9 +21,9 @@ const cdn = {
     },
     // cdn的js链接
     js: [
-        'https://cdn.idlemystic.io/download/js/web3.js',
-        'https://cdn.idlemystic.io/download/js/torus-embed.js',
-        'https://cdn.idlemystic.io/download/js/Portis.js',
+        // 'https://cdn.idlemystic.io/download/js/web3.js',
+        // 'https://cdn.idlemystic.io/download/js/torus-embed.js',
+        // 'https://cdn.idlemystic.io/download/js/Portis.js',
     ]
 }
 
