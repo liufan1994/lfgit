@@ -46,17 +46,19 @@ module.exports = {
             .end()
         // ============压缩图片 end============
 
-        // ============注入cdn start============
         config.resolve.symlinks(true);
         config.resolve.alias
             .set('@', resolve('src'))
             .set('@assets', resolve('src/assets'))
             .set('@images', resolve('src/assets/images'))
             .set('@common', resolve('src/assets/common'))
+            .set('@h5', resolve('src/assets/h5'))
+            .set('@web', resolve('src/assets/web'))
             .set('@components', resolve('src/components'))
             .set('@mixins', resolve('src/mixins'))
             .set('@views', resolve('src/views'))
             .set('@store', resolve('src/store'));
+        // ============注入cdn start============
         config
             .plugin('html')
             .tap(args => {

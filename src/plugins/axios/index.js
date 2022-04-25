@@ -4,14 +4,17 @@ import axios from 'axios'
 // import router from '@/router'
 
 const instance = axios.create({
-    baseURL: '',
+    baseURL: process.env.VUE_APP_API_URL,
     timeout: 15000,
+    headers:{
+        'Content-Type':'application/json'
+    }
 })
 // 添加请求拦截器
 instance.interceptors.request.use(
     function(config) {
         // 在发送请求之前做些什么
-        // console.log(config)
+        console.log(config)
 
         const noTokenUrl = ['/v1/employee/list-page22222']
 
@@ -20,6 +23,7 @@ instance.interceptors.request.use(
             config.headers.token = token
         }
 
+        console.log(config)
         return config
     },
     function(error) {
@@ -31,7 +35,7 @@ instance.interceptors.request.use(
 // 添加响应拦截器
 instance.interceptors.response.use(
     function(res) {
-        // 不需要额外处理返回值的URL
+        // 不需要额外处理 返回值(例如没有res.data.status的情况) 的URL
         const unHandleUrl = [
             '/v1/visit-log/download', //访客记录-导出
         ]

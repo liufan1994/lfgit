@@ -2,7 +2,7 @@
     <div class="HelloWorld">
         <div>这里是liufan的git {{ isLoginCom }}</div>
         <div class="myStyle" @click="myFunction">点我 {{total}} </div>
-        <!-- <p>djgnsakjgnjdsnfkjwjsmfkredmkfd</p> -->
+        <el-button>t6bgbh hb</el-button>
     </div>
 </template>
 
@@ -24,17 +24,15 @@ export default {
         },
     },
     created(){
+        this.$message('这是一条消息提示')
     },
     methods:{
         async myFunction(){
             try {
-                const res =await heros({
-                    user_id: {},
-                    page: 1,
-                    pageSize: 1,
-                    chain_type: 'bscscan'
+                const res =await heros({},{
+                    // headers:{"x-requested-with": "XMLHttpRequest"}
                 })
-                this.total = res.body.total
+                this.total = res.body.ban_ip
             } catch (err) {
                 console.log('err: ', err);
             }
@@ -52,9 +50,6 @@ export default {
     .myStyle{
         color: #3399ff;
         cursor: pointer;
-    }
-    p{
-        width: 10px;
     }
 }
 </style>

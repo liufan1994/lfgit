@@ -1,9 +1,19 @@
 import axios from '../plugins/axios/index'
 
-export function heros(params) {
+
+export function heros(params={},otherParams={}) {
   return axios({
-    url: '/api/package/get_user_heros/',
+    url: '/api/admin/checkip/',
     method: 'get',
-    params
+    params,
+    ...otherParams
+  })
+}
+
+export function qwe(params) {
+  return axios({
+    url: '/api/package/qwe/',
+    method: 'get',
+    params,
   })
 }
