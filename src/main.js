@@ -13,7 +13,7 @@ console.log('router: ', router);
 Vue.use(Button)
 Vue.prototype.$message = Message
 
-if(process.env.NODE_ENV === 'development') new window.VConsole();
+// if(process.env.NODE_ENV === 'development') new window.VConsole();
 
 new Vue({
     router,

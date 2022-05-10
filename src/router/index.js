@@ -3,10 +3,7 @@ import VueRouter from 'vue-router'
 // import Menu from '../utils/menu-list'
 // import Message from 'element-ui'
 
-
-// Vue.use(VueRouter)
-if (!window.VueRouter) Vue.use(VueRouter)
-
+Vue.use(VueRouter)
 
 const routes = [
     { path: '/', redirect: '/home' },
@@ -28,7 +25,6 @@ const router = new VueRouter({
     // base: process.env.BASE_URL,
     routes,
 })
-
 // 路由白名单-不需要进行菜单权限判断的路由
 // const whiteList = ['/login']
 // 路由守卫
